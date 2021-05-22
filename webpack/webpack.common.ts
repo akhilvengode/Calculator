@@ -19,7 +19,7 @@ const config: webpack.Configuration = {
                 __dirname,
                 "../node_modules/ds-components/components/dist/esm/css/styles.css"
             ),
-            "datePickerStyles": path.resolve(
+            datePickerStyles: path.resolve(
                 __dirname,
                 "../node_modules/react-datetime/css/react-datetime.css"
             )
@@ -79,13 +79,13 @@ const config: webpack.Configuration = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.ejs",
-            favicon: "./assets/icon/favicon.ico"
+            favicon: "./assets/icon/favicon.png"
         }),
         new webpack.DefinePlugin({
-            "FRONTEND_URL": JSON.stringify(process.env.FRONTEND_URL),
-            "API_URL": JSON.stringify(process.env.API_URL),
-            "SIGNALLING_API_URL": JSON.stringify(process.env.SIGNALLING_API_URL),
-            "SIGNALLING_WS_URL": JSON.stringify(process.env.SIGNALLING_WS_URL)
+            FRONTEND_URL: JSON.stringify(process.env.FRONTEND_URL),
+            API_URL: JSON.stringify(process.env.API_URL),
+            SIGNALLING_API_URL: JSON.stringify(process.env.SIGNALLING_API_URL),
+            SIGNALLING_WS_URL: JSON.stringify(process.env.SIGNALLING_WS_URL)
         })
     ]
 };
