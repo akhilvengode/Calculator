@@ -1,0 +1,39 @@
+@import "../../styles/colors";
+
+.toggle {
+    display: flex;
+    padding: 0.5rem;
+    width: 80px;
+    height: 36px;
+    align-items: center;
+    background: $primary-toggle-bg;
+    border-radius: 30px;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    #{&}__button {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $primary-toggle-btn;
+        box-sizing: inherit;
+    }
+
+    &--secondary {
+        justify-content: center;
+        background: $secondary-toggle-bg;
+
+        .toggle__button {
+            background: $secondary-toggle-btn;
+        }
+    }
+
+    &--ternary {
+        justify-content: flex-end;
+        background: $ternary-toggle-bg;
+
+        .toggle__button {
+            background: $ternary-toggle-btn;
+        }
+    }
+}

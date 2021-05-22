@@ -1,0 +1,38 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - echo Nothing to do in the install phase...
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo building UI for smm
+      - bash scripts/smm_api_config_builder.sh
+      - npm run build
+      - mv dist smm-dist
+      - rm .env
+      - echo building UI for ncat
+      - bash scripts/ncat_api_config_builder.sh
+      - npm run build
+      - mv dist ncat-dist
+      - rm .env
+      - echo running appspec selector
+      - bash scripts/appspec_selector.sh
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - 'smm-dist/**/*'
+    - 'ncat-dist/**/*'
+    - 'appspec.yml'
+cache:
+  paths:
+    - node_modules/**/*

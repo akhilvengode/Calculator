@@ -1,0 +1,58 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+
+.button {
+    @include content-center;
+    background: $primary-button;
+    color: $primary-button-font;
+    font-size: 2.7rem;
+    border-radius: 8px;
+    padding: 1rem;
+    outline: none;
+    border: none;
+
+    &--reset,
+    &--del {
+        font-size: 1.5rem;
+        background: $primary-reset;
+        color: $primary-reset-font;
+    }
+
+    &--result {
+        font-size: 1.5rem;
+        background: $primary-result;
+        color: $primary-result-font;
+    }
+}
+
+.button--secondary {
+    background: $secondary-button;
+    color: $secondary-button-font;
+
+    &--reset,
+    &--del {
+        background: $secondary-reset;
+        color: $secondary-reset-font;
+    }
+
+    &--result {
+        background: $secondary-result;
+        color: $secondary-result-font;
+    }
+}
+
+.button--ternary {
+    background: $ternary-button;
+    color: $ternary-button-font;
+
+    &--reset,
+    &--del {
+        background: $ternary-reset;
+        color: $ternary-reset-font;
+    }
+
+    &--result {
+        background: $ternary-result;
+        color: $ternary-result-font;
+    }
+}

@@ -1,0 +1,7 @@
+version: 0.0
+os: linux
+files:
+  - source: smm-dist
+    destination: /var/www/AWS_DEPLOY/dtm/v4/SMM-DTM-UI-V4/production/smm-dist
+  - source: ncat-dist
+    destination: /var/www/AWS_DEPLOY/dtm/v4/SMM-DTM-UI-V4/production/ncat-dist

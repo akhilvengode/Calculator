@@ -1,0 +1,23 @@
+@import "../../styles/colors";
+
+.text-box {
+    padding: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    background: $primary-text-background;
+    justify-content: flex-end;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+
+    &--secondary {
+        background: $secondary-text-background;
+        color: $secondary-color;
+    }
+
+    &--ternary {
+        background: $ternary-text-background;
+        color: $ternary-color;
+    }
+}
