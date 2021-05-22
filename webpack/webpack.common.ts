@@ -26,7 +26,7 @@ const config: webpack.Configuration = {
         }
     },
     output: {
-        path: path.join(__dirname, "../dist"),
+        path: path.join(__dirname, "../build"),
         filename: "index_bundle.[contentHash].js",
         publicPath: "/"
     },
