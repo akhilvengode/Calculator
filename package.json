@@ -1,4 +1,5 @@
 {
+    "homepage": "http://akhilvengode.github.io/Calculator",
     "name": "calculator",
     "version": "1.0.0",
     "description": "Single place for all QBurst Apps",
@@ -6,6 +7,8 @@
     "author": "Qburst",
     "license": "ISC",
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "start": "webpack-dev-server --config ./webpack/webpack.development.ts",
         "build": "webpack --config ./webpack/webpack.production.ts",
         "prettier": "prettier --write \"src/**/*.{ts,tsx}\"",
@@ -62,6 +65,7 @@
         "eslint-plugin-react-hooks": "^4.0.4",
         "eslint-plugin-standard": "^4.0.1",
         "file-loader": "^6.0.0",
+        "gh-pages": "^3.1.0",
         "html-webpack-plugin": "^4.3.0",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^25.5.3",
