@@ -2,14 +2,14 @@
 
 .text-box {
     padding: 1rem;
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 500;
     background: $primary-text-background;
     justify-content: flex-end;
-    min-height: 80px;
+    min-height: 50px;
     display: flex;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 5px;
 
     &--secondary {
         background: $secondary-text-background;
@@ -19,5 +19,12 @@
     &--ternary {
         background: $ternary-text-background;
         color: $ternary-color;
+    }
+
+    @media screen and (min-width: 1366px) {
+        font-size: 3rem;
+        min-height: 80px;
+        font-weight: 700;
+        border-radius: 8px;
     }
 }

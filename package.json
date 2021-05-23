@@ -3,7 +3,7 @@
     "name": "calculator",
     "version": "1.0.0",
     "description": "Calculator",
-    "main": "./build/index_bundle.js",
+    "main": "index.js",
     "author": "Akhil",
     "license": "ISC",
     "scripts": {
