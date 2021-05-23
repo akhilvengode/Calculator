@@ -28,7 +28,7 @@ const config: webpack.Configuration = {
     output: {
         path: path.join(__dirname, "../build"),
         filename: "index_bundle.js",
-        publicPath: "/"
+        publicPath: "/Calculator"
     },
     module: {
         rules: [
