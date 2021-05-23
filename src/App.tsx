@@ -8,7 +8,7 @@ import { joinClass } from "../utils";
 
 const App: React.FC = () => {
     const [result, setResult] = useState("");
-    const [theme, setTheme] = useState("ternary");
+    const [theme, setTheme] = useState("primary");
 
     const handleChange = (value: string) => {
         switch (value) {

@@ -2,9 +2,9 @@
     "homepage": "https://akhilvengode.github.io/Calculator",
     "name": "calculator",
     "version": "1.0.0",
-    "description": "Single place for all QBurst Apps",
-    "main": "index.js",
-    "author": "Qburst",
+    "description": "Calculator",
+    "main": "./build/index_bundle.js",
+    "author": "Akhil",
     "license": "ISC",
     "scripts": {
         "predeploy": "npm run build",
