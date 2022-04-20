@@ -19,10 +19,25 @@ const App: React.FC = () => {
                 setResult("");
                 return;
             case "=":
-                setResult((prevState) => eval(prevState).toString());
+                setResult((prevState) => {
+                    try {
+                        return eval(prevState).toString();
+                    } catch (error) {
+                        return "Not valid input";
+                    }
+                });
                 return;
             default:
-                setResult((prevState) => prevState + value);
+                setResult((prevState) => {
+                    if (
+                        prevState.toLowerCase().includes("infinity") ||
+                        prevState.toLowerCase().includes("nan") ||
+                        prevState.toLowerCase().includes("not valid input")
+                    ) {
+                        return value;
+                    }
+                    return prevState + value;
+                });
         }
     };
 
